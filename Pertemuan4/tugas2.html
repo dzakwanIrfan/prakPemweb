@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 2</title>
+</head>
+<body>
+    <h1>Aplikasi Kalkulator Sederhana</h1>
+    <form action="">
+        <label for="input1">Input 1 :</label>
+        <input type="text" id="input1" name="input1" oninput="cek(this)"><br><br>
+        <label for="input2">Input 2 :</label>
+        <input type="text" id="input2" name="input2" oninput="cek(this)"><br><br>
+        <input type="button" value="+" onclick="proses('+')">
+        <input type="button" value="-" onclick="proses('-')">
+        <input type="button" value="*" onclick="proses('*')">
+        <input type="button" value="/" onclick="proses('/')">
+
+        <p>Hasil : <span id="hasil"></span></p>
+    </form>
+
+    <script>
+        const input1 = document.getElementById('input1');
+        const input2 = document.getElementById('input2');
+        const hasil = document.getElementById('hasil');
+
+        function proses(operator){
+            if(input1.value == "" || input1.value == ""){
+                alert("Masukkan angka valid.");
+                return;
+            }else{
+                switch(operator){
+                    case '+':
+                    hasil.innerHTML = parseFloat(input1.value) + parseFloat(input2.value);
+                    break;
+    
+                    case '-':
+                    hasil.innerHTML = parseFloat(input1.value) - parseFloat(input2.value);
+                    break;
+    
+                    case '*':
+                    hasil.innerHTML = parseFloat(input1.value) * parseFloat(input2.value);
+                    break;
+    
+                    case '/':
+                    hasil.innerHTML = parseFloat(input1.value) / parseFloat(input2.value);
+                    break;
+                }
+            }
+        }
+        function cek(inputField){
+            const value = inputField.value;
+            
+            const cleanedValue = value.replace(/-+/g, '-').replace(/\.{2,}/g, '.').replace(/\,{2,}/g, ',');
+            
+            inputField.value = cleanedValue;
+            
+            if (value.includes('--') || value.includes('..') || value.includes(',,')) {
+                alert("Hanya boleh satu tanda minus atau satu tanda titik desimal.");
+            }
+        }
+    </script>
+</body>
+</html>

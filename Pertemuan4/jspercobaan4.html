@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Praktikum Pemrogram Web</title>
+</head>
+<body>
+    <img src="gambar1.png" name="img1" style="width: 100px; height: 100px;" onMouseOver="ganti_gambar2()" onMouseOut="ganti_gambar1()">
+    <script>
+        function ganti_gambar1(){
+            document.img1.src = "gambar1.png";
+        }
+        function ganti_gambar2(){
+            document.img1.src = "gambar2.png";
+        }
+    </script>
+</body>
+</html>

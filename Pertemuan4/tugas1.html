@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tugas 1</title>
+</head>
+<body>
+    <h1>Aplikasi Konversi Nilai</h1>
+
+    <form name="form_konversi" onsubmit="konversi(); return false;">
+        <label for="nilai">Nilai :</label>
+        <input type="number" name="nilai" id="nilai" oninput="cekNilai();">
+        <input type="submit" value="Konversi">
+    </form>
+
+    <p>Hasil Konversi : <span id="hasil"></span></p>
+
+    <script>
+        const nilai = document.getElementById('nilai');
+        const hasil = document.getElementById('hasil');
+
+        function konversi(){
+            const nilaiInput = parseFloat(nilai.value);
+            
+            if(isNaN(nilaiInput)){
+                alert("Masukkan angka valid.");
+                return;
+            }
+
+            if(nilaiInput <= 20){
+                hasil.innerHTML = "E";
+            }else if(nilaiInput > 20 && nilaiInput <= 40){
+                hasil.innerHTML = "D";
+            }else if(nilaiInput > 40 && nilaiInput <= 60){
+                hasil.innerHTML = "C";
+            }else if(nilaiInput > 60 && nilaiInput <= 80){
+                hasil.innerHTML = "B";
+            }else if(nilaiInput > 80 && nilaiInput <= 100){
+                hasil.innerHTML = "A";
+            }
+        }
+        function cekNilai(){
+            let regex = /^[0-9]+$/;
+            if(!regex.test(nilai.value)){
+                alert("Hanya boleh input bilangan bulat!");
+                nilai.value = nilai.value.replace(/[^0-9]/g, '');
+            }
+            if(nilai.value > 100){
+                alert("Nilai tidak boleh lebih dari 100");
+                nilai.value = "100";
+            }
+        }
+    </script>
+</body>
+</html>

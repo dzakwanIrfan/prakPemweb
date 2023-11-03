@@ -1,0 +1,45 @@
+.container{
+    border: 0px solid black;
+    width: 75%;
+    margin: auto;
+}
+.atas{
+    border: 5px solid black;
+    height: 100px;
+    margin-bottom: 5px;
+    box-sizing: border-box;
+}
+
+.tengah{
+    border: 0px solid black;
+    height: 500px;
+    margin-bottom: 5px;
+    box-sizing: border-box;
+}
+
+.kanan{
+    border: 2px solid red;
+    width: 25%;
+    height: 500px;
+    box-sizing: border-box;
+    float: right;
+}
+
+.kiri{
+    border: 2px solid blue;
+    width: 74%;
+    height: 500px;
+    box-sizing: border-box;
+}
+
+.bawah{
+    border: 10px solid black;
+    height: 50px;
+    box-sizing: border-box;
+}
+
+
+.touch:hover{
+    border: 5px dashed red;
+}
+

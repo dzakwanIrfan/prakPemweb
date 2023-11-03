@@ -1,0 +1,68 @@
+body {background: blue;}
+h2{
+    font-family: "Comic Sans MS";
+    background-color: red;
+    text-align: center;
+}
+
+table{
+    background: gray;
+    margin: 0 auto;
+    padding: 5px;
+    width: 68%;
+    border-width: 0px;
+    border: 4px dashed green;
+    border-radius: 12px;
+}
+
+.kolom1{
+    font-weight: bold;
+    width: 15%;
+}
+.kolom2{width: 2%;}
+.kolom3{width: 83%;}
+
+#txtNama, #txtKota {
+    width: 186px;
+    border: 3px ridge #222;
+    border-radius: 5px;
+}
+
+#txtTgl, #txtBulan {
+    width: 54px;
+    border: 3px ridge #222;
+    border-radius: 5px;
+}
+
+#txtTahun {
+    width: 87px;
+    border: 3px ridge #222; 
+    border-radius: 5px;
+}
+
+#txtAlamat {
+    width: 436px;
+    height: 42px;
+    border: 3px ridge #222; 
+    border-radius: 5px;
+}
+
+#btnKirim, #btnCancel {
+    background-color: green; 
+    color: white; 
+    padding: 10px 20px; 
+    border: none; 
+    cursor: pointer; 
+    margin-right: 10px;
+    border-radius: 12px; 
+    transition: background-color 0.3s;
+}
+
+#btnKirim:active, #btnCancel:active{
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    background-color: gray;
+}
+
+#btnCancel {
+    background-color: red; 
+}

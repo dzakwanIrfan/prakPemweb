@@ -1,0 +1,19 @@
+<script>
+    const name = document.getElementById("name");
+    const email = document.getElementById("email");
+    const comment = document.getElementById("comment");
+    function cek(){
+        if (name != "" && email !="" && comment !="") {
+            alert("Pengisian form sukses!")
+            return true;
+        }else{
+            alert('Anda harus mengisi data dengan lengkap!');
+        }
+    }
+    function cekNama(){
+        var alphaExp = /^[a-zA-Z]+$/;
+        if(nama.value != alphaExp){
+            alert("Tidak boleh ada angka dan simbol");
+        }
+    }
+</script>
